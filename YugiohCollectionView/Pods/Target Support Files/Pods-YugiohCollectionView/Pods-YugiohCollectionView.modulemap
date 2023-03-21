@@ -1,0 +1,6 @@
+framework module Pods_YugiohCollectionView {
+  umbrella header "Pods-YugiohCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B6BB961129C945D700601734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961029C945D700601734 /* AppDelegate.swift */; };
 		B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961229C945D700601734 /* SceneDelegate.swift */; };
-		B6BB961529C945D700601734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961429C945D700601734 /* ViewController.swift */; };
-		B6BB961829C945D700601734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961629C945D700601734 /* Main.storyboard */; };
 		B6BB961A29C945D900601734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961929C945D900601734 /* Assets.xcassets */; };
 		B6BB961D29C945D900601734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961B29C945D900601734 /* LaunchScreen.storyboard */; };
+		B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9D67E29C949D000AEA887 /* Coordinator.swift */; };
+		B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9D68129C94B6700AEA887 /* YugiohCardsViewController.swift */; };
+		C35F9CF2FFC0E6A8C4B816C5 /* Pods_YugiohCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FFE6EB5A19B584047AE215 /* Pods_YugiohCollectionView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14FFE6EB5A19B584047AE215 /* Pods_YugiohCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YugiohCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E76AAEE56D055ADA64A7E6 /* Pods-YugiohCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YugiohCollectionView.debug.xcconfig"; path = "Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView.debug.xcconfig"; sourceTree = "<group>"; };
+		B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YugiohCollectionView.release.xcconfig"; path = "Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView.release.xcconfig"; sourceTree = "<group>"; };
 		B6BB960D29C945D700601734 /* YugiohCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YugiohCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB961029C945D700601734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB961229C945D700601734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6BB961429C945D700601734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6BB961729C945D700601734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6BB961929C945D900601734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6BB961C29C945D900601734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6BB961E29C945D900601734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F9D67E29C949D000AEA887 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B6F9D68129C94B6700AEA887 /* YugiohCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35F9CF2FFC0E6A8C4B816C5 /* Pods_YugiohCollectionView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5AE3F91DBFB83E5DF12B9D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77E76AAEE56D055ADA64A7E6 /* Pods-YugiohCollectionView.debug.xcconfig */,
+				B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B6BB960429C945D700601734 = {
 			isa = PBXGroup;
 			children = (
 				B6BB960F29C945D700601734 /* YugiohCollectionView */,
+				B6F9D67929C9493F00AEA887 /* Source */,
 				B6BB960E29C945D700601734 /* Products */,
+				A5AE3F91DBFB83E5DF12B9D9 /* Pods */,
+				E1B3B6E364939E67EE901F3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +75,68 @@
 			children = (
 				B6BB961029C945D700601734 /* AppDelegate.swift */,
 				B6BB961229C945D700601734 /* SceneDelegate.swift */,
-				B6BB961429C945D700601734 /* ViewController.swift */,
-				B6BB961629C945D700601734 /* Main.storyboard */,
 				B6BB961929C945D900601734 /* Assets.xcassets */,
 				B6BB961B29C945D900601734 /* LaunchScreen.storyboard */,
 				B6BB961E29C945D900601734 /* Info.plist */,
 			);
 			path = YugiohCollectionView;
+			sourceTree = "<group>";
+		};
+		B6F9D67929C9493F00AEA887 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D67D29C9499700AEA887 /* Coordinator */,
+				B6F9D67C29C9499300AEA887 /* ViewControllers */,
+				B6F9D67B29C9498E00AEA887 /* Model */,
+				B6F9D67A29C9498900AEA887 /* Worker */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B6F9D67A29C9498900AEA887 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		B6F9D67B29C9498E00AEA887 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B6F9D67C29C9499300AEA887 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D68029C94B2900AEA887 /* YugiohCards */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6F9D67D29C9499700AEA887 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D67E29C949D000AEA887 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B6F9D68029C94B2900AEA887 /* YugiohCards */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D68129C94B6700AEA887 /* YugiohCardsViewController.swift */,
+			);
+			path = YugiohCards;
+			sourceTree = "<group>";
+		};
+		E1B3B6E364939E67EE901F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14FFE6EB5A19B584047AE215 /* Pods_YugiohCollectionView.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6BB962129C945D900601734 /* Build configuration list for PBXNativeTarget "YugiohCollectionView" */;
 			buildPhases = (
+				B919FE1DC18EAA2D8852CC3A /* [CP] Check Pods Manifest.lock */,
 				B6BB960929C945D700601734 /* Sources */,
 				B6BB960A29C945D700601734 /* Frameworks */,
 				B6BB960B29C945D700601734 /* Resources */,
+				8DDECEA5A3DEF0F62340FC9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +201,68 @@
 			files = (
 				B6BB961D29C945D900601734 /* LaunchScreen.storyboard in Resources */,
 				B6BB961A29C945D900601734 /* Assets.xcassets in Resources */,
-				B6BB961829C945D700601734 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DDECEA5A3DEF0F62340FC9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B919FE1DC18EAA2D8852CC3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YugiohCollectionView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6BB960929C945D700601734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6BB961529C945D700601734 /* ViewController.swift in Sources */,
 				B6BB961129C945D700601734 /* AppDelegate.swift in Sources */,
 				B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */,
+				B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */,
+				B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B6BB961629C945D700601734 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6BB961729C945D700601734 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6BB961B29C945D900601734 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +390,7 @@
 		};
 		B6BB962229C945D900601734 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77E76AAEE56D055ADA64A7E6 /* Pods-YugiohCollectionView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,7 +400,7 @@
 				INFOPLIST_FILE = YugiohCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +418,7 @@
 		};
 		B6BB962329C945D900601734 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,7 +428,7 @@
 				INFOPLIST_FILE = YugiohCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
