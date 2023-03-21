@@ -11,13 +11,10 @@ class YugiohCardsViewModel: NSObject {
     
     private let request = Request()
     private var myCards: YugiohCards?
+    var filter: [Datum] = []
     
-    var numerOfRows: Int {
-        return myCards?.data?.count ?? 0
-    }
-    
-    func cellForRows(indexPath: IndexPath) ->  Datum? {
-        return myCards?.data?[indexPath.row]
+    var model: [Datum]? {
+        myCards?.data
     }
     
     func requestYugiohCards(completion: @escaping(Bool)-> Void) {
