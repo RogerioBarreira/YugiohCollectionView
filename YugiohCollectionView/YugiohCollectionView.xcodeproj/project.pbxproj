@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		B6BB961129C945D700601734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961029C945D700601734 /* AppDelegate.swift */; };
 		B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961229C945D700601734 /* SceneDelegate.swift */; };
-		B6BB961529C945D700601734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961429C945D700601734 /* ViewController.swift */; };
-		B6BB961829C945D700601734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961629C945D700601734 /* Main.storyboard */; };
 		B6BB961A29C945D900601734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961929C945D900601734 /* Assets.xcassets */; };
 		B6BB961D29C945D900601734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961B29C945D900601734 /* LaunchScreen.storyboard */; };
+		B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9D67E29C949D000AEA887 /* Coordinator.swift */; };
+		B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9D68129C94B6700AEA887 /* YugiohCardsViewController.swift */; };
 		C35F9CF2FFC0E6A8C4B816C5 /* Pods_YugiohCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FFE6EB5A19B584047AE215 /* Pods_YugiohCollectionView.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +23,11 @@
 		B6BB960D29C945D700601734 /* YugiohCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YugiohCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB961029C945D700601734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB961229C945D700601734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6BB961429C945D700601734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6BB961729C945D700601734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6BB961929C945D900601734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6BB961C29C945D900601734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6BB961E29C945D900601734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F9D67E29C949D000AEA887 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B6F9D68129C94B6700AEA887 /* YugiohCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,6 @@
 				77E76AAEE56D055ADA64A7E6 /* Pods-YugiohCollectionView.debug.xcconfig */,
 				B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -56,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				B6BB960F29C945D700601734 /* YugiohCollectionView */,
+				B6F9D67929C9493F00AEA887 /* Source */,
 				B6BB960E29C945D700601734 /* Products */,
 				A5AE3F91DBFB83E5DF12B9D9 /* Pods */,
 				E1B3B6E364939E67EE901F3C /* Frameworks */,
@@ -75,13 +75,60 @@
 			children = (
 				B6BB961029C945D700601734 /* AppDelegate.swift */,
 				B6BB961229C945D700601734 /* SceneDelegate.swift */,
-				B6BB961429C945D700601734 /* ViewController.swift */,
-				B6BB961629C945D700601734 /* Main.storyboard */,
 				B6BB961929C945D900601734 /* Assets.xcassets */,
 				B6BB961B29C945D900601734 /* LaunchScreen.storyboard */,
 				B6BB961E29C945D900601734 /* Info.plist */,
 			);
 			path = YugiohCollectionView;
+			sourceTree = "<group>";
+		};
+		B6F9D67929C9493F00AEA887 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D67D29C9499700AEA887 /* Coordinator */,
+				B6F9D67C29C9499300AEA887 /* ViewControllers */,
+				B6F9D67B29C9498E00AEA887 /* Model */,
+				B6F9D67A29C9498900AEA887 /* Worker */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B6F9D67A29C9498900AEA887 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		B6F9D67B29C9498E00AEA887 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B6F9D67C29C9499300AEA887 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D68029C94B2900AEA887 /* YugiohCards */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6F9D67D29C9499700AEA887 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D67E29C949D000AEA887 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B6F9D68029C94B2900AEA887 /* YugiohCards */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9D68129C94B6700AEA887 /* YugiohCardsViewController.swift */,
+			);
+			path = YugiohCards;
 			sourceTree = "<group>";
 		};
 		E1B3B6E364939E67EE901F3C /* Frameworks */ = {
@@ -154,7 +201,6 @@
 			files = (
 				B6BB961D29C945D900601734 /* LaunchScreen.storyboard in Resources */,
 				B6BB961A29C945D900601734 /* Assets.xcassets in Resources */,
-				B6BB961829C945D700601734 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +253,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6BB961529C945D700601734 /* ViewController.swift in Sources */,
 				B6BB961129C945D700601734 /* AppDelegate.swift in Sources */,
 				B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */,
+				B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */,
+				B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B6BB961629C945D700601734 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6BB961729C945D700601734 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6BB961B29C945D900601734 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,7 +400,7 @@
 				INFOPLIST_FILE = YugiohCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,7 +428,7 @@
 				INFOPLIST_FILE = YugiohCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
