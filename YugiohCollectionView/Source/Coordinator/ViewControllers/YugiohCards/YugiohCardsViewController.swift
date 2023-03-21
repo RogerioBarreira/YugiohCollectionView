@@ -77,6 +77,11 @@ extension YugiohCardsViewController: UICollectionViewDelegate, UICollectionViewD
         return UICollectionViewCell()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.startYugiohDetailCards(detail: viewModelYugiohCards.filter[indexPath.row])
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 185, height: 300)
     }
