@@ -1,0 +1,2 @@
+# YugiohCollectionView
+Projeto utilizando CollectionView
