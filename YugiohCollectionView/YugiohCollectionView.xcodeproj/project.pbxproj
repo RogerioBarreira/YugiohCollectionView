@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B68535BA29C9D08B006606EA /* YugiohCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535B929C9D08B006606EA /* YugiohCardsView.swift */; };
 		B68535BD29C9EA56006606EA /* YugiohCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535BC29C9EA56006606EA /* YugiohCardsViewModel.swift */; };
+		B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535BE29C9F17E006606EA /* YugiohCards.swift */; };
+		B68535C129C9F215006606EA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535C029C9F215006606EA /* Request.swift */; };
 		B6BB961129C945D700601734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961029C945D700601734 /* AppDelegate.swift */; };
 		B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961229C945D700601734 /* SceneDelegate.swift */; };
 		B6BB961A29C945D900601734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961929C945D900601734 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YugiohCollectionView.release.xcconfig"; path = "Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView.release.xcconfig"; sourceTree = "<group>"; };
 		B68535B929C9D08B006606EA /* YugiohCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardsView.swift; sourceTree = "<group>"; };
 		B68535BC29C9EA56006606EA /* YugiohCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardsViewModel.swift; sourceTree = "<group>"; };
+		B68535BE29C9F17E006606EA /* YugiohCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCards.swift; sourceTree = "<group>"; };
+		B68535C029C9F215006606EA /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		B6BB960D29C945D700601734 /* YugiohCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YugiohCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB961029C945D700601734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB961229C945D700601734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		B6F9D67A29C9498900AEA887 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				B68535C029C9F215006606EA /* Request.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 		B6F9D67B29C9498E00AEA887 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B68535BE29C9F17E006606EA /* YugiohCards.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,10 +266,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6BB961129C945D700601734 /* AppDelegate.swift in Sources */,
+				B68535C129C9F215006606EA /* Request.swift in Sources */,
 				B68535BD29C9EA56006606EA /* YugiohCardsViewModel.swift in Sources */,
 				B68535BA29C9D08B006606EA /* YugiohCardsView.swift in Sources */,
 				B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */,
 				B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */,
+				B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */,
 				B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
