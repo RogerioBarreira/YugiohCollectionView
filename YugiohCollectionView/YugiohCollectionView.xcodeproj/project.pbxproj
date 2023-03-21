@@ -11,6 +11,7 @@
 		B68535BD29C9EA56006606EA /* YugiohCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535BC29C9EA56006606EA /* YugiohCardsViewModel.swift */; };
 		B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535BE29C9F17E006606EA /* YugiohCards.swift */; };
 		B68535C129C9F215006606EA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535C029C9F215006606EA /* Request.swift */; };
+		B68535C429C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535C329C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift */; };
 		B6BB961129C945D700601734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961029C945D700601734 /* AppDelegate.swift */; };
 		B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961229C945D700601734 /* SceneDelegate.swift */; };
 		B6BB961A29C945D900601734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961929C945D900601734 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		B68535BC29C9EA56006606EA /* YugiohCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardsViewModel.swift; sourceTree = "<group>"; };
 		B68535BE29C9F17E006606EA /* YugiohCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCards.swift; sourceTree = "<group>"; };
 		B68535C029C9F215006606EA /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B68535C329C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellYugiohCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6BB960D29C945D700601734 /* YugiohCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YugiohCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB961029C945D700601734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB961229C945D700601734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 				B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B68535C229C9FBCB006606EA /* CellYugiohCard */ = {
+			isa = PBXGroup;
+			children = (
+				B68535C329C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift */,
+			);
+			path = CellYugiohCard;
 			sourceTree = "<group>";
 		};
 		B6BB960429C945D700601734 = {
@@ -136,6 +146,7 @@
 		B6F9D68029C94B2900AEA887 /* YugiohCards */ = {
 			isa = PBXGroup;
 			children = (
+				B68535C229C9FBCB006606EA /* CellYugiohCard */,
 				B68535B929C9D08B006606EA /* YugiohCardsView.swift */,
 				B6F9D68129C94B6700AEA887 /* YugiohCardsViewController.swift */,
 				B68535BC29C9EA56006606EA /* YugiohCardsViewModel.swift */,
@@ -271,6 +282,7 @@
 				B68535BA29C9D08B006606EA /* YugiohCardsView.swift in Sources */,
 				B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */,
 				B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */,
+				B68535C429C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift in Sources */,
 				B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */,
 				B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */,
 			);

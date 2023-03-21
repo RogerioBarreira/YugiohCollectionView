@@ -11,7 +11,7 @@ class Request: NSObject {
     
     func requestYugiohCards(completion: @escaping(YugiohCards?, Bool)-> Void) {
         
-        guard let url = URL(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Tornado%20Dragon") else { return }
+        guard let url = URL(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php") else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
         
