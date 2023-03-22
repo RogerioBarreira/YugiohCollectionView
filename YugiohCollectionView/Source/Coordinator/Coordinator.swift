@@ -22,4 +22,10 @@ class Coordinator: NSObject {
         let viewController = YugiohCardsViewController()
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func startYugiohDetailCards(detail: Datum) {
+        let viewController = YugiohDetailCardsViewController()
+        viewController.viewModelYugiohDetail.detailCards(detail: detail)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 }

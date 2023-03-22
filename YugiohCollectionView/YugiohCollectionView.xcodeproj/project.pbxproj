@@ -12,6 +12,9 @@
 		B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535BE29C9F17E006606EA /* YugiohCards.swift */; };
 		B68535C129C9F215006606EA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535C029C9F215006606EA /* Request.swift */; };
 		B68535C429C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535C329C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift */; };
+		B68535C729CA2F1C006606EA /* YugiohDetailCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535C629CA2F1C006606EA /* YugiohDetailCardsViewController.swift */; };
+		B68535C929CA2F47006606EA /* YugiohDetailCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535C829CA2F47006606EA /* YugiohDetailCardsView.swift */; };
+		B68535CB29CA3086006606EA /* YugiohDetailCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535CA29CA3086006606EA /* YugiohDetailCardsViewModel.swift */; };
 		B6BB961129C945D700601734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961029C945D700601734 /* AppDelegate.swift */; };
 		B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB961229C945D700601734 /* SceneDelegate.swift */; };
 		B6BB961A29C945D900601734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB961929C945D900601734 /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 		B68535BE29C9F17E006606EA /* YugiohCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCards.swift; sourceTree = "<group>"; };
 		B68535C029C9F215006606EA /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		B68535C329C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellYugiohCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B68535C629CA2F1C006606EA /* YugiohDetailCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohDetailCardsViewController.swift; sourceTree = "<group>"; };
+		B68535C829CA2F47006606EA /* YugiohDetailCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohDetailCardsView.swift; sourceTree = "<group>"; };
+		B68535CA29CA3086006606EA /* YugiohDetailCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohDetailCardsViewModel.swift; sourceTree = "<group>"; };
 		B6BB960D29C945D700601734 /* YugiohCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YugiohCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB961029C945D700601734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB961229C945D700601734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,16 @@
 			path = CellYugiohCard;
 			sourceTree = "<group>";
 		};
+		B68535C529CA2EDA006606EA /* YugiohDetailCards */ = {
+			isa = PBXGroup;
+			children = (
+				B68535C829CA2F47006606EA /* YugiohDetailCardsView.swift */,
+				B68535C629CA2F1C006606EA /* YugiohDetailCardsViewController.swift */,
+				B68535CA29CA3086006606EA /* YugiohDetailCardsViewModel.swift */,
+			);
+			path = YugiohDetailCards;
+			sourceTree = "<group>";
+		};
 		B6BB960429C945D700601734 = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +121,6 @@
 			children = (
 				B6F9D67D29C9499700AEA887 /* Coordinator */,
 				B6F9D67B29C9498E00AEA887 /* Model */,
-				B6F9D67C29C9499300AEA887 /* ViewControllers */,
 				B6F9D67A29C9498900AEA887 /* Worker */,
 			);
 			path = Source;
@@ -130,6 +145,7 @@
 		B6F9D67C29C9499300AEA887 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B68535C529CA2EDA006606EA /* YugiohDetailCards */,
 				B6F9D68029C94B2900AEA887 /* YugiohCards */,
 			);
 			path = ViewControllers;
@@ -138,6 +154,7 @@
 		B6F9D67D29C9499700AEA887 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				B6F9D67C29C9499300AEA887 /* ViewControllers */,
 				B6F9D67E29C949D000AEA887 /* Coordinator.swift */,
 			);
 			path = Coordinator;
@@ -280,10 +297,13 @@
 				B68535C129C9F215006606EA /* Request.swift in Sources */,
 				B68535BD29C9EA56006606EA /* YugiohCardsViewModel.swift in Sources */,
 				B68535BA29C9D08B006606EA /* YugiohCardsView.swift in Sources */,
+				B68535CB29CA3086006606EA /* YugiohDetailCardsViewModel.swift in Sources */,
+				B68535C929CA2F47006606EA /* YugiohDetailCardsView.swift in Sources */,
 				B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */,
 				B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */,
 				B68535C429C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift in Sources */,
 				B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */,
+				B68535C729CA2F1C006606EA /* YugiohDetailCardsViewController.swift in Sources */,
 				B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
