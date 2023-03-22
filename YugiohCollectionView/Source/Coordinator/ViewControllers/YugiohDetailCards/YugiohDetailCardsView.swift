@@ -25,9 +25,9 @@ class YugiohDetailCardsView: UIView {
     let nameCardYugioh: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .systemBackground
+        label.backgroundColor = .systemYellow
         label.textAlignment = .center
-        label.textColor = .label
+        label.textColor = .black
         label.font = .systemFont(ofSize: 17, weight: .bold)
         label.layer.borderWidth = 2
         label.layer.borderColor = UIColor.systemYellow.cgColor
@@ -59,9 +59,11 @@ class YugiohDetailCardsView: UIView {
         view.backgroundColor = .systemBackground
         view.settings.textColor = .label
         view.settings.textFont = .systemFont(ofSize: 17, weight: .bold)
-        view.settings.starMargin = 2
+        view.settings.starMargin = 1
         view.settings.totalStars = 10
         view.settings.filledColor = .systemYellow
+        view.settings.filledBorderWidth = 1
+        view.settings.filledBorderColor = .label
         view.tintColor = .blue
         return view
     }()
@@ -72,11 +74,11 @@ class YugiohDetailCardsView: UIView {
         view.backgroundColor = .systemBackground
         view.settings.textColor = .label
         view.settings.textFont = .systemFont(ofSize: 17, weight: .bold)
-        view.settings.starMargin = 2
+        view.settings.starMargin = 1
         view.settings.totalStars = 10
-        
         view.settings.filledColor = .systemYellow
-        view.tintColor = .blue
+        view.settings.filledBorderWidth = 1
+        view.settings.filledBorderColor = .label
         return view
     }()
     
@@ -86,10 +88,11 @@ class YugiohDetailCardsView: UIView {
         view.backgroundColor = .systemBackground
         view.settings.textColor = .label
         view.settings.textFont = .systemFont(ofSize: 17, weight: .bold)
-        view.settings.starMargin = 2
+        view.settings.starMargin = 1
         view.settings.totalStars = 10
         view.settings.filledColor = .systemYellow
-        view.tintColor = .blue
+        view.settings.filledBorderWidth = 1
+        view.settings.filledBorderColor = .label
         return view
     }()
     
@@ -102,7 +105,7 @@ class YugiohDetailCardsView: UIView {
         button.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
         button.backgroundColor = .systemYellow
         button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.systemYellow.cgColor
+        button.layer.borderColor = UIColor.systemBackground.cgColor
         button.layer.cornerRadius = 25
         button.clipsToBounds = true
         return button
@@ -132,8 +135,8 @@ class YugiohDetailCardsView: UIView {
         NSLayoutConstraint.activate([
             imageCardYugioh.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 15),
             imageCardYugioh.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageCardYugioh.heightAnchor.constraint(equalToConstant: 280),
-            imageCardYugioh.widthAnchor.constraint(equalToConstant: 200),
+            imageCardYugioh.heightAnchor.constraint(equalToConstant: 300),
+            imageCardYugioh.widthAnchor.constraint(equalToConstant: 350),
         ])
     }
     
@@ -153,7 +156,7 @@ class YugiohDetailCardsView: UIView {
             textDescription.topAnchor.constraint(equalTo: nameCardYugioh.bottomAnchor, constant: 15),
             textDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             textDescription.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            textDescription.heightAnchor.constraint(equalToConstant: 120)
+            textDescription.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
     
