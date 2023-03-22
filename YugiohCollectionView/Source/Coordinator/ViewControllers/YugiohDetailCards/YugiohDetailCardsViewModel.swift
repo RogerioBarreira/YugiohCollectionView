@@ -10,9 +10,14 @@ import Foundation
 class YugiohDetailCardsViewModel: NSObject {
     
     private var detailCards: Datum?
+    var result: CardSet?
+    
+    var detailCard: Datum? {
+        detailCards
+    }
     
     var imageUrl: URL? {
-        return URL(string: detailCards?.cardImages?.first?.imageURL ?? "")
+        return URL(string: detailCards?.cardImages?.first?.imageURLCropped ?? "")
     }
     
     var nameCard: String {
@@ -35,7 +40,7 @@ class YugiohDetailCardsViewModel: NSObject {
         return detailCards?.level ?? 0
     }
     
-    func detailCards(detail: Datum) {
+    func detailCards(detail: Datum?) {
         self.detailCards = detail
     }
 }

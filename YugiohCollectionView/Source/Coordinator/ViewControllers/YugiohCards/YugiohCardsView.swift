@@ -20,6 +20,7 @@ class YugiohCardsView: UIView {
     let mySearchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.placeholder = "Digite o nome da Carta"
         searchBar.searchBarStyle = .minimal
         return searchBar
     }()
