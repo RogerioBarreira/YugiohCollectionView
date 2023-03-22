@@ -11,8 +11,12 @@ class YugiohCardSetsViewModel: NSObject {
     
     private var myCardSet: Datum?
     
+    var resultDetail: [CardSet]? {
+        myCardSet?.cardSets
+    }
+    
     var setNameCard: String {
-        myCardSet?.cardSets?.first?.setName ?? ""
+        myCardSet?.name ?? ""
     }
     
     var setCodeCard: String {
@@ -20,7 +24,7 @@ class YugiohCardSetsViewModel: NSObject {
     }
     
     var setraRarityCard: String {
-        myCardSet?.cardSets?.first?.setPrice ?? ""
+        myCardSet?.cardSets?.first?.setRarity ?? ""
     }
     
     var setRarityCodeCard: String {

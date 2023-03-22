@@ -20,9 +20,9 @@ class YugiohCardSetsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "SetCards"
-        setupUI()
+        self.title = viewModelYugiohCardSets.setNameCard
         setupTableView()
+        setupActions()
     }
     
     override func loadView() {
@@ -30,32 +30,19 @@ class YugiohCardSetsViewController: UIViewController {
     }
     
     func setupTableView() {
-        viewYugiohCardSets.myTableView.delegate = self
-        viewYugiohCardSets.myTableView.dataSource = self
-        viewYugiohCardSets.myTableView.register(CellYugiohCardsTableViewCell.self, forCellReuseIdentifier: CellYugiohCardsTableViewCell.identifier)
-    }
-   
-    func setupUI() {
-        setupCodeSetCard()
-        setupRaritySetCard()
-        setupRarityCodeSetCard()
-        setupPriceSetCard()
+        viewYugiohCardSets.myTableViewCardSet.delegate = self
+        viewYugiohCardSets.myTableViewCardSet.dataSource = self
+        viewYugiohCardSets.myTableViewCardSet.register(CellYugiohCardsTableViewCell.self, forCellReuseIdentifier: CellYugiohCardsTableViewCell.identifier)
     }
     
-    func setupCodeSetCard() {
-        viewYugiohCardSets.codeCardSet.text = "Código do Card = \(viewModelYugiohCardSets.setCodeCard)"
+    func setupActions() {
+        self.viewYugiohCardSets.exitButton.addTarget(self, action: #selector(exitYugiohCarsSets), for: .touchUpInside)
     }
     
-    func setupRaritySetCard() {
-        viewYugiohCardSets.rarityCardSet.text = "Raridade = \(viewModelYugiohCardSets.setraRarityCard)"
-    }
-    
-    func setupRarityCodeSetCard() {
-        viewYugiohCardSets.rarityCodeCardSet.text = "Raridade do Código = \(viewModelYugiohCardSets.setRarityCodeCard)"
-    }
-    
-    func setupPriceSetCard() {
-        viewYugiohCardSets.priceCardSet.text = "Preço da Carta = \(viewModelYugiohCardSets.setPriceCard)"
+    @objc
+    func exitYugiohCarsSets() {
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.popViewController()
     }
 }
 
@@ -66,7 +53,7 @@ extension YugiohCardSetsViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = self.viewYugiohCardSets.myTableView.dequeueReusableCell(withIdentifier: CellYugiohCardsTableViewCell.identifier, for: indexPath) as? CellYugiohCardsTableViewCell {
+        if let cell = self.viewYugiohCardSets.myTableViewCardSet.dequeueReusableCell(withIdentifier: CellYugiohCardsTableViewCell.identifier, for: indexPath) as? CellYugiohCardsTableViewCell {
             cell.setupCell(cards: viewModelYugiohCardSets.cellForRows(indexPath: indexPath))
             cell.backgroundColor = .clear
             return cell
@@ -76,6 +63,8 @@ extension YugiohCardSetsViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.startYugiohDetailCardsSets(detail: viewModelYugiohCardSets.cellForRows(indexPath: indexPath))
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

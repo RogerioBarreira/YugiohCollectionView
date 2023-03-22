@@ -10,7 +10,7 @@ import NVActivityIndicatorView
 
 class YugiohCardSetsView: UIView {
     
-    let nameCardSet: UILabel = {
+    let nameTableViewCardSet: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .systemYellow
@@ -25,7 +25,7 @@ class YugiohCardSetsView: UIView {
         return label
     }()
     
-    let myTableView: UITableView = {
+    let myTableViewCardSet: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .systemYellow
@@ -33,61 +33,44 @@ class YugiohCardSetsView: UIView {
         tableView.separatorStyle = .none
         return tableView
     }()
-
-    let codeCardSet: UILabel = {
+    
+    let nameTableViewCardPrice: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .systemBackground
+        label.backgroundColor = .systemYellow
         label.textAlignment = .center
-        label.textColor = .label
+        label.text = "CARD PRICE"
+        label.textColor = .black
         label.font = .systemFont(ofSize: 17, weight: .bold)
         label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.systemYellow.cgColor
+        label.layer.borderColor = UIColor.systemBackground.cgColor
         label.layer.cornerRadius = 10
         label.clipsToBounds = true
         return label
     }()
     
-    let rarityCardSet: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .systemBackground
-        label.textAlignment = .center
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 17, weight: .bold)
-        label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.systemYellow.cgColor
-        label.layer.cornerRadius = 10
-        label.clipsToBounds = true
-        return label
+    let myTableViewCardPrice: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .systemYellow
+        tableView.layer.cornerRadius = 10
+        tableView.separatorStyle = .none
+        return tableView
     }()
     
-    let rarityCodeCardSet: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .systemBackground
-        label.textAlignment = .center
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 17, weight: .bold)
-        label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.systemYellow.cgColor
-        label.layer.cornerRadius = 10
-        label.clipsToBounds = true
-        return label
-    }()
-    
-    let priceCardSet: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .systemBackground
-        label.textAlignment = .center
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 17, weight: .bold)
-        label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.systemYellow.cgColor
-        label.layer.cornerRadius = 10
-        label.clipsToBounds = true
-        return label
+    let exitButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemBackground
+        button.setTitle("EXIT", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
+        button.backgroundColor = .systemYellow
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.systemBackground.cgColor
+        button.layer.cornerRadius = 25
+        button.clipsToBounds = true
+        return button
     }()
 
     override init(frame: CGRect) {
@@ -100,60 +83,60 @@ class YugiohCardSetsView: UIView {
     }
     
     func configContraints() {
-        setupNameCardSet()
-        setupTableView()
-        setupCodeCardSet()
-        setupRarityCardSet()
-        setupPriceCardSet()
+        setupNameTableViewCardSet()
+        setupTableViewCardSet()
+        setupNameTableViewCardPrice()
+        setupTableViewCardPrice()
+        setupButtonExit()
     }
     
-    func setupNameCardSet() {
-        addSubview(nameCardSet)
+    func setupNameTableViewCardSet() {
+        addSubview(nameTableViewCardSet)
         NSLayoutConstraint.activate([
-            nameCardSet.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            nameCardSet.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
-            nameCardSet.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            nameCardSet.heightAnchor.constraint(equalToConstant: 40)
+            nameTableViewCardSet.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            nameTableViewCardSet.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            nameTableViewCardSet.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            nameTableViewCardSet.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
-    func setupTableView() {
-        addSubview(myTableView)
+    func setupTableViewCardSet() {
+        addSubview(myTableViewCardSet)
         NSLayoutConstraint.activate([
-            myTableView.topAnchor.constraint(equalTo: nameCardSet.bottomAnchor, constant: 10),
-            myTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
-            myTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -28),
-            myTableView.heightAnchor.constraint(equalToConstant: 150)
+            myTableViewCardSet.topAnchor.constraint(equalTo: nameTableViewCardSet.bottomAnchor, constant: 10),
+            myTableViewCardSet.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            myTableViewCardSet.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -28),
+            myTableViewCardSet.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
-    func setupCodeCardSet() {
-        addSubview(codeCardSet)
+    func setupNameTableViewCardPrice() {
+        addSubview(nameTableViewCardPrice)
         NSLayoutConstraint.activate([
-            codeCardSet.topAnchor.constraint(equalTo: myTableView.bottomAnchor, constant: 10),
-            codeCardSet.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
-            codeCardSet.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            codeCardSet.heightAnchor.constraint(equalToConstant: 40)
+            nameTableViewCardPrice.topAnchor.constraint(equalTo: myTableViewCardSet.bottomAnchor, constant: 30),
+            nameTableViewCardPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            nameTableViewCardPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            nameTableViewCardPrice.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
-    func setupRarityCardSet() {
-        addSubview(rarityCardSet)
+    func setupTableViewCardPrice() {
+        addSubview(myTableViewCardPrice)
         NSLayoutConstraint.activate([
-            rarityCardSet.topAnchor.constraint(equalTo: codeCardSet.bottomAnchor, constant: 10),
-            rarityCardSet.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
-            rarityCardSet.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            rarityCardSet.heightAnchor.constraint(equalToConstant: 40)
+            myTableViewCardPrice.topAnchor.constraint(equalTo: nameTableViewCardPrice.bottomAnchor, constant: 10),
+            myTableViewCardPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            myTableViewCardPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            myTableViewCardPrice.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
-    func setupPriceCardSet() {
-        addSubview(priceCardSet)
+    func setupButtonExit() {
+        addSubview(exitButton)
         NSLayoutConstraint.activate([
-            priceCardSet.topAnchor.constraint(equalTo: rarityCardSet.bottomAnchor, constant: 10),
-            priceCardSet.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
-            priceCardSet.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            priceCardSet.heightAnchor.constraint(equalToConstant: 40)
+            exitButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -15),
+            exitButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            exitButton.heightAnchor.constraint(equalToConstant: 50),
+            exitButton.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
 }

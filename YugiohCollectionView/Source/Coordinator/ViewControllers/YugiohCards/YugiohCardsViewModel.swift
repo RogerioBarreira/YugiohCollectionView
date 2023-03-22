@@ -11,6 +11,7 @@ class YugiohCardsViewModel: NSObject {
     
     private let request = Request()
     private var myCards: YugiohCards?
+    
     var filter: [Datum] = []
     
     var model: [Datum]? {

@@ -34,4 +34,15 @@ class Coordinator: NSObject {
         viewController.viewModelYugiohCardSets.getResultCard(detail: detail)
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func startYugiohDetailCardsSets(detail: CardSet?) {
+        let viewController = YugiohCardSetDetailViewController()
+        viewController.viewModelDetailCardSets.getResultCard(detail: detail)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func popViewController() {
+        let viewController = YugiohDetailCardsViewController()
+        self.navigationController.popToRootViewController(animated: true)
+    }
 }

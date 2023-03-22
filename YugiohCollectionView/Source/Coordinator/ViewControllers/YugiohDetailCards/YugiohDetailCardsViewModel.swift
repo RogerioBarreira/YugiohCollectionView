@@ -10,6 +10,7 @@ import Foundation
 class YugiohDetailCardsViewModel: NSObject {
     
     private var detailCards: Datum?
+    
     var result: CardSet?
     
     var detailCard: Datum? {
@@ -42,5 +43,9 @@ class YugiohDetailCardsViewModel: NSObject {
     
     func detailCards(detail: Datum?) {
         self.detailCards = detail
+    }
+    
+    func getResultDetail(detail: CardSet?) {
+        self.result = detail
     }
 }
