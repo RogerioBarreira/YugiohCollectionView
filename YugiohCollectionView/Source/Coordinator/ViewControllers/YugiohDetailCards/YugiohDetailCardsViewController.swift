@@ -23,7 +23,7 @@ class YugiohDetailCardsViewController: UIViewController {
         self.title = viewModelYugiohDetail.nameCard
         navigationController?.navigationBar.prefersLargeTitles = true
         setupUI()
-
+        setupActions()
     }
     
     override func loadView() {
@@ -64,5 +64,15 @@ class YugiohDetailCardsViewController: UIViewController {
     func setupLevelCard() {
         viewYugiohDetailCards.levelCardYugioh.text = "Level = \(viewModelYugiohDetail.levelCard)"
         viewYugiohDetailCards.levelCardYugioh.rating = Double(viewModelYugiohDetail.levelCard)
+    }
+    
+    func setupActions() {
+        self.viewYugiohDetailCards.nextButtonYugioh.addTarget(self, action: #selector(nextYugiohCarsSets), for: .touchUpInside)
+    }
+    
+    @objc
+    func nextYugiohCarsSets() {
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.startYugiohCardsSets(detail: viewModelYugiohDetail.detailCard)
     }
 }

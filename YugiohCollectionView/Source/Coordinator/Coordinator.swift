@@ -23,9 +23,26 @@ class Coordinator: NSObject {
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
-    func startYugiohDetailCards(detail: Datum) {
+    func startYugiohDetailCards(detail: Datum?) {
         let viewController = YugiohDetailCardsViewController()
         viewController.viewModelYugiohDetail.detailCards(detail: detail)
         self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func startYugiohCardsSets(detail: Datum?) {
+        let viewController = YugiohCardSetsViewController()
+        viewController.viewModelYugiohCardSets.getResultCard(detail: detail)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func startYugiohDetailCardsSets(detail: CardSet?) {
+        let viewController = YugiohCardSetDetailViewController()
+        viewController.viewModelDetailCardSets.getResultCard(detail: detail)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func popViewController() {
+        let viewController = YugiohDetailCardsViewController()
+        self.navigationController.popToRootViewController(animated: true)
     }
 }
