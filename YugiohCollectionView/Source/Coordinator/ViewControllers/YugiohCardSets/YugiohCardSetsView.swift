@@ -34,7 +34,7 @@ class YugiohCardSetsView: UIView {
         return tableView
     }()
     
-    let nameTableViewCardPrice: UILabel = {
+    let nameCardPrice: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .systemYellow
@@ -49,13 +49,74 @@ class YugiohCardSetsView: UIView {
         return label
     }()
     
-    let myTableViewCardPrice: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .systemYellow
-        tableView.layer.cornerRadius = 10
-        tableView.separatorStyle = .none
-        return tableView
+    let cardMarketPrice: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .systemBackground
+        label.textAlignment = .center
+        label.textColor = .label
+        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.layer.borderWidth = 2
+        label.layer.borderColor = UIColor.systemYellow.cgColor
+        label.layer.cornerRadius = 10
+        label.clipsToBounds = true
+        return label
+    }()
+    
+    let tcgPlayerPrice: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .systemBackground
+        label.textAlignment = .center
+        label.textColor = .label
+        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.layer.borderWidth = 2
+        label.layer.borderColor = UIColor.systemYellow.cgColor
+        label.layer.cornerRadius = 10
+        label.clipsToBounds = true
+        return label
+    }()
+    
+    let ebayPrice: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .systemBackground
+        label.textAlignment = .center
+        label.textColor = .label
+        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.layer.borderWidth = 2
+        label.layer.borderColor = UIColor.systemYellow.cgColor
+        label.layer.cornerRadius = 10
+        label.clipsToBounds = true
+        return label
+    }()
+    
+    let amazonPrice: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .systemBackground
+        label.textAlignment = .center
+        label.textColor = .label
+        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.layer.borderWidth = 2
+        label.layer.borderColor = UIColor.systemYellow.cgColor
+        label.layer.cornerRadius = 10
+        label.clipsToBounds = true
+        return label
+    }()
+    
+    let coolStuffincPrice: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .systemBackground
+        label.textAlignment = .center
+        label.textColor = .label
+        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.layer.borderWidth = 2
+        label.layer.borderColor = UIColor.systemYellow.cgColor
+        label.layer.cornerRadius = 10
+        label.clipsToBounds = true
+        return label
     }()
     
     let exitButton: UIButton = {
@@ -85,8 +146,12 @@ class YugiohCardSetsView: UIView {
     func configContraints() {
         setupNameTableViewCardSet()
         setupTableViewCardSet()
-        setupNameTableViewCardPrice()
-        setupTableViewCardPrice()
+        setupNameCardPrice()
+        setupCardMarketPrice()
+        setupTcgPlayerPrice()
+        setupEbayPrice()
+        setupAmazonPrice()
+        setupCoolStuffincPrice()
         setupButtonExit()
     }
     
@@ -110,23 +175,63 @@ class YugiohCardSetsView: UIView {
         ])
     }
     
-    func setupNameTableViewCardPrice() {
-        addSubview(nameTableViewCardPrice)
+    func setupNameCardPrice() {
+        addSubview(nameCardPrice)
         NSLayoutConstraint.activate([
-            nameTableViewCardPrice.topAnchor.constraint(equalTo: myTableViewCardSet.bottomAnchor, constant: 30),
-            nameTableViewCardPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
-            nameTableViewCardPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            nameTableViewCardPrice.heightAnchor.constraint(equalToConstant: 40)
+            nameCardPrice.topAnchor.constraint(equalTo: myTableViewCardSet.bottomAnchor, constant: 30),
+            nameCardPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            nameCardPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            nameCardPrice.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
-    func setupTableViewCardPrice() {
-        addSubview(myTableViewCardPrice)
+    func setupCardMarketPrice() {
+        addSubview(cardMarketPrice)
         NSLayoutConstraint.activate([
-            myTableViewCardPrice.topAnchor.constraint(equalTo: nameTableViewCardPrice.bottomAnchor, constant: 10),
-            myTableViewCardPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
-            myTableViewCardPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            myTableViewCardPrice.heightAnchor.constraint(equalToConstant: 150)
+            cardMarketPrice.topAnchor.constraint(equalTo: nameCardPrice.bottomAnchor, constant: 10),
+            cardMarketPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            cardMarketPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            cardMarketPrice.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
+    
+    func setupTcgPlayerPrice() {
+        addSubview(tcgPlayerPrice)
+        NSLayoutConstraint.activate([
+            tcgPlayerPrice.topAnchor.constraint(equalTo: cardMarketPrice.bottomAnchor, constant: 10),
+            tcgPlayerPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            tcgPlayerPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            tcgPlayerPrice.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
+    
+    func setupEbayPrice() {
+        addSubview(ebayPrice)
+        NSLayoutConstraint.activate([
+            ebayPrice.topAnchor.constraint(equalTo: tcgPlayerPrice.bottomAnchor, constant: 10),
+            ebayPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            ebayPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            ebayPrice.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
+    
+    func setupAmazonPrice() {
+        addSubview(amazonPrice)
+        NSLayoutConstraint.activate([
+            amazonPrice.topAnchor.constraint(equalTo: ebayPrice.bottomAnchor, constant: 10),
+            amazonPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            amazonPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            amazonPrice.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
+    
+    func setupCoolStuffincPrice() {
+        addSubview(coolStuffincPrice)
+        NSLayoutConstraint.activate([
+            coolStuffincPrice.topAnchor.constraint(equalTo: amazonPrice.bottomAnchor, constant: 10),
+            coolStuffincPrice.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            coolStuffincPrice.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            coolStuffincPrice.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     

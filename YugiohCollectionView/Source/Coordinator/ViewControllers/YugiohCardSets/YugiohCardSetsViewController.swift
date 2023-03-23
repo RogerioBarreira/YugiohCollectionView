@@ -22,11 +22,16 @@ class YugiohCardSetsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = viewModelYugiohCardSets.setNameCard
         setupTableView()
+        setupUI()
         setupActions()
     }
     
     override func loadView() {
         self.view = viewYugiohCardSets
+    }
+    
+    func setupActions() {
+        self.viewYugiohCardSets.exitButton.addTarget(self, action: #selector(exitYugiohCarsSets), for: .touchUpInside)
     }
     
     func setupTableView() {
@@ -35,8 +40,37 @@ class YugiohCardSetsViewController: UIViewController {
         viewYugiohCardSets.myTableViewCardSet.register(CellYugiohCardsTableViewCell.self, forCellReuseIdentifier: CellYugiohCardsTableViewCell.identifier)
     }
     
-    func setupActions() {
-        self.viewYugiohCardSets.exitButton.addTarget(self, action: #selector(exitYugiohCarsSets), for: .touchUpInside)
+    
+//    let cardmarketPrice, tcgplayerPrice, ebayPrice, amazonPrice: String?
+//    let coolstuffincPrice: String?
+    
+    
+    func setupUI () {
+        setupCardMarketPrice()
+        setupTcgplayerPrice()
+        setuptEbayPrice()
+        setuptAmazonPrice()
+        setupCoolStuffincPrice()
+    }
+    
+    func setupCardMarketPrice() {
+        viewYugiohCardSets.cardMarketPrice.text = "Preço CardMarket = \(viewModelYugiohCardSets.cardMarketPrice)"
+    }
+    
+    func setupTcgplayerPrice() {
+        viewYugiohCardSets.tcgPlayerPrice.text = "Preço TcgPlayer = \(viewModelYugiohCardSets.tcgPlayerPrice)"
+    }
+    
+    func setuptEbayPrice() {
+        viewYugiohCardSets.ebayPrice.text = "Preço Ebay = \(viewModelYugiohCardSets.ebayPrice)"
+    }
+    
+    func setuptAmazonPrice() {
+        viewYugiohCardSets.amazonPrice.text = "Preço Amazon = \(viewModelYugiohCardSets.amazonPrice)"
+    }
+    
+    func setupCoolStuffincPrice() {
+        viewYugiohCardSets.coolStuffincPrice.text = "Preço Coll Stuffinc = \(viewModelYugiohCardSets.coolStuffincPrice)"
     }
     
     @objc

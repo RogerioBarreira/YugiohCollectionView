@@ -10,6 +10,26 @@ import Foundation
 class YugiohCardSetsViewModel: NSObject {
     
     private var myCardSet: Datum?
+        
+    var cardMarketPrice: String {
+        myCardSet?.cardPrices?.first?.cardmarketPrice ?? ""
+    }
+    
+    var tcgPlayerPrice: String {
+        myCardSet?.cardPrices?.first?.tcgplayerPrice ?? ""
+    }
+    
+    var ebayPrice: String {
+        myCardSet?.cardPrices?.first?.ebayPrice ?? ""
+    }
+    
+    var amazonPrice: String {
+        myCardSet?.cardPrices?.first?.amazonPrice ?? ""
+    }
+    
+    var coolStuffincPrice: String {
+        myCardSet?.cardPrices?.first?.coolstuffincPrice ?? ""
+    }
     
     var resultDetail: [CardSet]? {
         myCardSet?.cardSets
