@@ -10,10 +10,15 @@ import Foundation
 class YugiohDetailCardsViewModel: NSObject {
     
     private var detailCards: Datum?
-    var result: CardSet?
+    
+    //var result: CardSet?
     
     var detailCard: Datum? {
         detailCards
+    }
+    
+    var cardPrice: String {
+        detailCards?.cardPrices?.first?.amazonPrice ?? ""
     }
     
     var imageUrl: URL? {
@@ -41,6 +46,10 @@ class YugiohDetailCardsViewModel: NSObject {
     }
     
     func detailCards(detail: Datum?) {
+        self.detailCards = detail
+    }
+    
+    func getResultDetail(detail: Datum?) {
         self.detailCards = detail
     }
 }

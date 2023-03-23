@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B67D7D6029CB299300B77E6B /* CellYugiohCardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D7D5F29CB299300B77E6B /* CellYugiohCardsTableViewCell.swift */; };
+		B67D7D6629CB5B9B00B77E6B /* YugiohCardSetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D7D6529CB5B9B00B77E6B /* YugiohCardSetDetailViewController.swift */; };
+		B67D7D6829CB5BB400B77E6B /* YugiohCardSetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D7D6729CB5BB400B77E6B /* YugiohCardSetDetailView.swift */; };
+		B67D7D6A29CB5BC700B77E6B /* YugiohCardSetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D7D6929CB5BC700B77E6B /* YugiohCardSetDetailViewModel.swift */; };
 		B68535BA29C9D08B006606EA /* YugiohCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535B929C9D08B006606EA /* YugiohCardsView.swift */; };
 		B68535BD29C9EA56006606EA /* YugiohCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535BC29C9EA56006606EA /* YugiohCardsViewModel.swift */; };
 		B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68535BE29C9F17E006606EA /* YugiohCards.swift */; };
@@ -33,6 +36,9 @@
 		77E76AAEE56D055ADA64A7E6 /* Pods-YugiohCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YugiohCollectionView.debug.xcconfig"; path = "Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView.debug.xcconfig"; sourceTree = "<group>"; };
 		B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YugiohCollectionView.release.xcconfig"; path = "Target Support Files/Pods-YugiohCollectionView/Pods-YugiohCollectionView.release.xcconfig"; sourceTree = "<group>"; };
 		B67D7D5F29CB299300B77E6B /* CellYugiohCardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellYugiohCardsTableViewCell.swift; sourceTree = "<group>"; };
+		B67D7D6529CB5B9B00B77E6B /* YugiohCardSetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardSetDetailViewController.swift; sourceTree = "<group>"; };
+		B67D7D6729CB5BB400B77E6B /* YugiohCardSetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardSetDetailView.swift; sourceTree = "<group>"; };
+		B67D7D6929CB5BC700B77E6B /* YugiohCardSetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardSetDetailViewModel.swift; sourceTree = "<group>"; };
 		B68535B929C9D08B006606EA /* YugiohCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardsView.swift; sourceTree = "<group>"; };
 		B68535BC29C9EA56006606EA /* YugiohCardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCardsViewModel.swift; sourceTree = "<group>"; };
 		B68535BE29C9F17E006606EA /* YugiohCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugiohCards.swift; sourceTree = "<group>"; };
@@ -73,6 +79,16 @@
 				B03838F2182E1D0537DC9CB8 /* Pods-YugiohCollectionView.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B67D7D6429CB5B5B00B77E6B /* YugiohCardSetDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B67D7D6729CB5BB400B77E6B /* YugiohCardSetDetailView.swift */,
+				B67D7D6529CB5B9B00B77E6B /* YugiohCardSetDetailViewController.swift */,
+				B67D7D6929CB5BC700B77E6B /* YugiohCardSetDetailViewModel.swift */,
+			);
+			path = YugiohCardSetDetail;
 			sourceTree = "<group>";
 		};
 		B68535C229C9FBCB006606EA /* CellYugiohCard */ = {
@@ -172,6 +188,7 @@
 		B6F9D67C29C9499300AEA887 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B67D7D6429CB5B5B00B77E6B /* YugiohCardSetDetail */,
 				B6D2B00F29CAA7B300DFE020 /* YugiohCardSets */,
 				B68535C529CA2EDA006606EA /* YugiohDetailCards */,
 				B6F9D68029C94B2900AEA887 /* YugiohCards */,
@@ -322,6 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D2B01129CAA7DB00DFE020 /* YugiohCardSetsView.swift in Sources */,
+				B67D7D6629CB5B9B00B77E6B /* YugiohCardSetDetailViewController.swift in Sources */,
+				B67D7D6829CB5BB400B77E6B /* YugiohCardSetDetailView.swift in Sources */,
 				B6D2B01529CAAA6200DFE020 /* YugiohCardSetsViewModel.swift in Sources */,
 				B6BB961129C945D700601734 /* AppDelegate.swift in Sources */,
 				B67D7D6029CB299300B77E6B /* CellYugiohCardsTableViewCell.swift in Sources */,
@@ -334,6 +353,7 @@
 				B6BB961329C945D700601734 /* SceneDelegate.swift in Sources */,
 				B6F9D67F29C949D000AEA887 /* Coordinator.swift in Sources */,
 				B68535C429C9FC6B006606EA /* CellYugiohCardCollectionViewCell.swift in Sources */,
+				B67D7D6A29CB5BC700B77E6B /* YugiohCardSetDetailViewModel.swift in Sources */,
 				B68535BF29C9F17E006606EA /* YugiohCards.swift in Sources */,
 				B68535C729CA2F1C006606EA /* YugiohDetailCardsViewController.swift in Sources */,
 				B6F9D68229C94B6700AEA887 /* YugiohCardsViewController.swift in Sources */,
